@@ -37,3 +37,9 @@
 근거 없는 난이도·음역·추천 문단을 생성하지 않는다. 공개 콘텐츠에 내부 작업 보고를 끼워 넣지 않는다.
 
 상세 기준: [협업](https://github.com/jpop-today/docs/blob/main/operations/collaboration.md) · [검증 하네스](https://github.com/jpop-today/docs/blob/main/engineering/harness.md)
+
+## 클라우드 세션 재개
+
+24시간 세션 유지·무기한 백그라운드 실행을 보장하지 않는다. 매 실행은 확인한 main/Issue·현재 작업 범위를 기준으로 검토 가능한 결과를 남기고 PR·CI·preview·배포 상태와 다음 작업을 문서에 저장한다. 예약 실행은 실제 생성 결과와 실행 환경을 확인한 뒤에만 활성 상태로 기록한다. 상세 [지속 개발](https://github.com/jpop-today/docs/blob/main/operations/continuous-development.md)을 따른다. 반복 실행은 상태가 바뀌지 않은 차단 작업을 무한 재시도하지 않는다.
+
+관측 번호 미리보기는 [ADR-004](https://github.com/jpop-today/docs/blob/main/adr/004-observed-preview-read-model.md)에 따라 검증 카탈로그·운영 전환과 구분한다. 모든 preview는 noindex·광고 요청 없음이며 자료 수를 AdSense 승인 근거로 사용하지 않는다.

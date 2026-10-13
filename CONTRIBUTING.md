@@ -1,6 +1,6 @@
 # 개발·기여 진행
 
-작업 전 [스펙·설계](https://github.com/jpop-today/docs)와 해당 저장소의 `AGENTS.md`를 읽는다. `.github`는 운영 규칙과 템플릿, `docs`는 스펙·ADR·운영 기록, `jpoptoday`는 앱·데이터·테스트·CI·배포 구성을 관리한다. `.github`는 private이므로 규칙·템플릿의 자동 상속을 가정하지 않는다.
+작업 전 [스펙·설계](https://github.com/jpop-today/docs)와 해당 저장소의 `AGENTS.md`를 읽는다. 공개 `.github`는 조직 profile/README와 운영 규칙·템플릿, `docs`는 스펙·ADR·운영 기록, `jpoptoday`는 앱·데이터·테스트·CI·배포 구성을 관리한다. workflow와 에이전트 규칙은 필요한 저장소에 명시적으로 둔다.
 
 Issue에 목표·스펙 ID·담당 스레드·기준 SHA·저장소와 파일 범위·의존성·완료 기준을 정한다. 원격 Issue 생성이 막혔으면 로컬 작업 ID를 쓰고 나중에 연결한다. 브랜치는 `codex/<작업ID>-<주제>`처럼 구체적으로 명명한다. 클라우드에서는 기존 격리 체크아웃을 사용하며 Git worktree는 사용자 명시 요청이 있을 때만 만든다.
 
@@ -15,3 +15,5 @@ PR은 문제와 변경 후 사용자 동작을 먼저 설명하고 스펙·Issue
 릴리스에는 소스 SHA·데이터 스냅샷·배포 ID와 URL·검증 결과·이전 정상 버전을 남긴다. 문서 작성, 검증 통과, PR 병합, 미리보기 확인, 운영 배포, AdSense 준비·신청·승인을 각각 기록한다. Google 심사 결과 없이 승인을 완료로 표시하지 않는다.
 
 [작업 계약과 인계 양식](https://github.com/jpop-today/docs/blob/main/operations/collaboration.md)
+
+일일 작업은 [09시 운영 방식](https://github.com/jpop-today/docs/blob/main/operations/daily-development.md)을 따른다. 세 신규 담당의 결과는 각각 두 동료가 근거로 평가하며 관리자가 검증·교체·보고를 담당한다. 비밀 URL은 안전한 secret 입력 경로로만 제공한다. CI 보고와 에이전트 개발 실행, 버전 릴리스와 실제 운영 배포를 구분한다.

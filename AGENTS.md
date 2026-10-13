@@ -6,7 +6,7 @@
 
 ## 저장소와 작업 계약
 
-- `.github`: 조직 운영 규칙·기여 안내·Issue/PR 템플릿. 현재 private이므로 다른 저장소에 자동 적용된다고 가정하지 않는다.
+- `.github`: 공개 조직 프로필(profile/README.md)·운영 규칙·기여 안내·Issue/PR 템플릿. 2026-10-13 API로 public을 확인했다. AGENTS나 workflow가 다른 저장소에 자동 적용된다고 가정하지 않는다.
 - `docs`: 제품 스펙·ADR·검증 하네스·협업·운영 기록의 기준 문서.
 - `jpoptoday`: 앱·데이터 처리·테스트·CI·배포 구성. 문서만 보고 기존 앱 이관이 끝났다고 추정하지 않는다.
 
@@ -43,3 +43,9 @@
 24시간 세션 유지·무기한 백그라운드 실행을 보장하지 않는다. 매 실행은 확인한 main/Issue·현재 작업 범위를 기준으로 검토 가능한 결과를 남기고 PR·CI·preview·배포 상태와 다음 작업을 문서에 저장한다. 예약 실행은 실제 생성 결과와 실행 환경을 확인한 뒤에만 활성 상태로 기록한다. 상세 [지속 개발](https://github.com/jpop-today/docs/blob/main/operations/continuous-development.md)을 따른다. 반복 실행은 상태가 바뀌지 않은 차단 작업을 무한 재시도하지 않는다.
 
 관측 번호 미리보기는 [ADR-004](https://github.com/jpop-today/docs/blob/main/adr/004-observed-preview-read-model.md)에 따라 검증 카탈로그·운영 전환과 구분한다. 모든 preview는 noindex·광고 요청 없음이며 자료 수를 AdSense 승인 근거로 사용하지 않는다.
+
+## 매일 개발과 보고
+
+사용자는 매일 09:00 Asia/Seoul에 세 신규 하위 에이전트를 배정하고 관리자 보고·Discord 알림·검증된 버전 릴리스를 남기도록 명시했다. [일일 운영](https://github.com/jpop-today/docs/blob/main/operations/daily-development.md)을 따른다. 각 결과는 다른 두 에이전트가 실제 파일·검증 근거로 평가한다. 관리자는 최저 평가 담당을 active roster에서 제외하고 중단 도구와 신규 spawn으로 교체하며, 삭제 API가 없는 도구에서 물리 삭제됐다고 쓰지 않는다. 코드·평가 이력은 보존한다.
+
+Discord 메시지는 사용자가 승인한 보고 범위에서만 보낸다. DISCORD_WEBHOOK_URL은 저장소 Actions secret 또는 안전한 환경 binding으로 입력하며, 채팅·Git·로그에 값이나 token을 남기지 않는다. secret 누락은 skipped이며 delivered가 아니다. 오전 보고는 실제 전날 기록과 오늘 계획을, 완료 보고는 검증한 개선·릴리스·차단과 다음 계획을 구분한다. 릴리스는 의미 있는 변경과 통과한 검증에 근거하며 매일 빈 버전을 만들지 않는다. 기존 원본의 파랑·분홍과 파스텔 그라데이션은 디자인 변경에도 유지한다.

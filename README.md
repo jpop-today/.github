@@ -11,7 +11,17 @@
 - [SECURITY.md](SECURITY.md)
 - [.github/PULL_REQUEST_TEMPLATE.md](.github/PULL_REQUEST_TEMPLATE.md)
 - [.github/ISSUE_TEMPLATE/task.yml](.github/ISSUE_TEMPLATE/task.yml)
+- [다중 스레드 협업과 인계](https://github.com/jpop-today/docs/blob/main/operations/collaboration.md)
+- [검증 하네스](https://github.com/jpop-today/docs/blob/main/engineering/harness.md)
+
+| 저장소 | 관리 대상 |
+| --- | --- |
+| `.github` | 조직 운영 규칙·기여 안내·작업/PR 템플릿 |
+| `docs` | 제품 스펙·ADR·검증 기준·진행과 운영 기록 |
+| `jpoptoday` | 앱·데이터 처리·테스트·CI·배포 구성 |
 
 이 저장소는 현재 private이다. 공개 조직 프로필이나 모든 저장소의 기본 커뮤니티 파일로 자동 적용된다고 가정하지 않는다. private 저장소에서 확실히 사용할 규칙과 템플릿은 각 저장소에 명시적으로 둔다. 실행 워크플로도 실제 소스 저장소에 둔다. 공개 범위는 사용자가 정한 현재 설정을 유지한다.
 
 목표는 신뢰 가능한 JPOP 노래방 검색과 고유 콘텐츠를 갖추고 AdSense 심사를 준비하는 것이다. 제품·데이터·운영 사실은 증거로 기록한다.
+
+사용자는 일상 수정·검증·통합·배포와 여러 스레드의 협업을 위임했다. 작업마다 스펙 ID·기준 SHA·파일 담당·완료 기준을 남기고, 검증·병합·미리보기·운영 배포·AdSense 심사 상태를 구분한다. 현재 소스 이관·배포 진행 사실은 docs의 운영 기록에서 확인한다.
